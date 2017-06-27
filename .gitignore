@@ -35,3 +35,4 @@ resources/signing
 node_modules
 platforms
 typings
+resources/signing
