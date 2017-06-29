@@ -5,7 +5,9 @@
     "description": "A sample Apache Cordova application that responds to the deviceready event.",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "tsc && npm run bundle && cordova run android",
+        "tsc": "tsc",
+        "bundle": "webpack --config webpack.config.js --source-map"
     },
     "author": "Apache Cordova Team",
     "license": "Apache-2.0",
@@ -16,6 +18,17 @@
         "cordova-plugin-compat": "^1.0.0",
         "cordova-plugin-contacts": "^2.3.1",
         "cordova-plugin-whitelist": "^1.3.2"
+    },
+    "devDependencies": {
+        "@types/cordova": "^0.0.34",
+        "@types/cordova-plugin-contacts": "^0.0.3",
+        "typescript": "^2.4.1",
+        "webpack": "^1.14.0",
+        "webpack-dev-server": "^1.16.2",
+        "ts-loader": "1.3.3",
+        "html-loader": "0.4.4",
+        "css-loader": "0.26.1",
+        "awesome-typescript-loader": "^3.2.1"
     },
     "cordova": {
         "plugins": {
